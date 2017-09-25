@@ -10,6 +10,7 @@
 </head>
 <body>
 <%--2. Comment tag(JSP주석) --%>
+<%-- --%>
 <%--3. Declaration tag(선언분) --%>
 <%! private static final String DEFAULT_NAME = "Guest"; %>
 <%--4.Scriptlet tag(스크립틀릿) --%>
