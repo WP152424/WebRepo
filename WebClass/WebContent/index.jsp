@@ -1,28 +1,33 @@
-<!-- 1,Directive tag(지시자) -->
+<%@ page import="javax.xml.bind.annotation.XmlType" %><%--
+  Created by IntelliJ IDEA.
+  User: pc
+  Date: 2017-09-18
+  Time: 오후 2:16
+  To change this template use File | Settings | File Templates.
+--%>
+<!-- 1. Directive tag(지시자 태그) -->
 
-<%@ page language="java" contentType="text/html; charset=utf-8"
-    pageEncoding="utf-8"%>
+
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>첫번째 JSP</title>
+    <title>First JSP</title>
 </head>
 <body>
-<%--2. Comment tag(JSP주석) --%>
-<%-- --%>
-<%--3. Declaration tag(선언분) --%>
-<%! private static final String DEFAULT_NAME = "Guest"; %>
-<%--4.Scriptlet tag(스크립틀릿) --%>
-<%
-	// 자바 코드를 그대로 작성
-	String name = request.getParameter("name");
-	if(name == null) name = DEFAULT_NAME;
-	//out.println("<h1>Hello, "+name+"</h1>");
-	
-%>
+<%-- 2. Comment Tag( JSP 주석 ) --%>
+<%-- 3. Declaration Tag( 선언부 ) --%>
 
-<%-- 5. Expression tag(표현식) --%>
+<%!
+    private final static String DEFAULT_NAME = "Guest";
+%>
+<%-- 4. Scriptlet Tag(스크립틀릿) --%>
+<%
+    // 자바 코드를 그대로 작성
+    String name = request.getParameter("name");
+    if(name == null) name = DEFAULT_NAME;
+%>
+<%-- 5. Expression Tag(표현식) --%>
 <h1>Hello, <%=name%></h1>
 </body>
 </html>

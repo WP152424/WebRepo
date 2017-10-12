@@ -38,7 +38,7 @@ function menu_out(e) {
   	
     <%-- 세션이 없는 경우 --%>
     <%
-    	UserVO user = (UserVo) session.getAttribute("user");
+    	UserVO user = (UserVO) session.getAttribute("user");
     	if(user==null) {
     
     %>
@@ -54,7 +54,9 @@ function menu_out(e) {
 	    	<%= user.getName()+"님" %>
 	      </a>
 	      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions">
-	      	<button type="submit" class="dropdown-item">Sign out</button>
+	      	<form action="/WebClass/logout" method="post>
+	      		<button type="submit" class="dropdown-item">Sign out</button>
+	      		</form>
 	       	<div class="dropdown-divider"></div>
 	        <button type="button" class="dropdown-item">Action1</button>
 	        <button type="button" class="dropdown-item">Action2</button>
