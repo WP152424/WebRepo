@@ -43,7 +43,7 @@
     <% }else { %>
     <div class="nav-item dropdown">
       <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    	<%= session.getAttribute("id") + "님" %>
+    	이종상님
       </a>
       <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions">
       	<form action="/WebClass/bloglogout" method="post">
@@ -164,6 +164,9 @@
     <script>
     <%-- 로그인이 실패한 경우 처리 추가 --%>
 	<% if("error".equals(request.getAttribute("msg"))) { %>
+		document.getElementById('id').value = <%= request.getAttribute("w_id") %>;
+		document.getElementById('pwd').value = <%= request.getAttribute("w_pwd") %>;
+		
 		var myModal = $('#myModal');
 		myModal.find('.modal-title').text('Login Error');
 		myModal.find('.modal-body').text('Invalid username or password');
