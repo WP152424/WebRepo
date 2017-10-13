@@ -49,7 +49,7 @@
       	<form action="/WebClass/bloglogout" method="post">
       		<button type="submit" class="dropdown-item">Sign out</button>
    		</form>   	
-    	</div>
+    	</div> 
     </div>
 	<% } %>
     <!-- <form class="form-inline my-2 my-lg-0" id="loginForm2">
